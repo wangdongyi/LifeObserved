@@ -1,6 +1,6 @@
 # LifeObserved
 监听activity生命周期
-```LifeManager.getInstance().ObserveActivity(activity, new LifeListener() {
+```#LifeManager.getInstance().ObserveActivity(activity, new LifeListener() {
             @Override
             public void onCreate(Bundle bundle) {
                 Log.d(Tag,"onCreate");
@@ -36,4 +36,4 @@
                 Log.d(Tag,"onActivityResult");
             }
         });
-        ```
+        
