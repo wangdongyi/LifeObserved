@@ -34,7 +34,7 @@ public class LifeListenerManager {
     }
 
 
-    private void onStart() {
+    public void onStart() {
         for (LifeListener listener : listeners) {
             if (listener != null) {
                 ((LifeListener) listener).onStart();
@@ -43,7 +43,7 @@ public class LifeListenerManager {
     }
 
 
-    private void onResume() {
+    public void onResume() {
         for (LifeListener listener : listeners) {
             if (listener != null) {
                 ((LifeListener) listener).onResume();
@@ -52,7 +52,7 @@ public class LifeListenerManager {
     }
 
 
-    private void onPause() {
+    public void onPause() {
         for (LifeListener listener : listeners) {
             if (listener != null) {
                 ((LifeListener) listener).onPause();
@@ -61,7 +61,7 @@ public class LifeListenerManager {
     }
 
 
-    private void onStop() {
+    public void onStop() {
         for (LifeListener listener : listeners) {
             if (listener != null) {
                 ((LifeListener) listener).onStop();
@@ -70,7 +70,7 @@ public class LifeListenerManager {
     }
 
 
-    private void onDestroy() {
+    public void onDestroy() {
         //倒过来循环防止删除时有影响
         for (int i = listeners.size() - 1; i >= 0; i--) {
             if (listeners.get(i) != null) {
@@ -88,7 +88,7 @@ public class LifeListenerManager {
      * @ permissions
      * @ grantResults
      */
-    private void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
+    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
         for (LifeListener listener : listeners) {
             if (listener instanceof PermissionListener) {
                 ((PermissionListener) listener).onRequestPermissionsResult(requestCode, permissions, grantResults);
@@ -96,7 +96,7 @@ public class LifeListenerManager {
         }
     }
 
-    private void onActivityResult(int requestCode, int resultCode, Intent data) {
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
         for (LifeListener listener : listeners) {
             if (listener != null) {
                 listener.onActivityResult(requestCode, resultCode, data);
@@ -114,7 +114,7 @@ public class LifeListenerManager {
      *
      * @ listener
      */
-    private void recycleListener(LifeListener listener) {
+    public void recycleListener(LifeListener listener) {
         listeners.remove(listener);
         listener = null;
     }
