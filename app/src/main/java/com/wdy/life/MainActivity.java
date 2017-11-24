@@ -9,6 +9,10 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import java.io.File;
+import java.io.IOException;
+import java.util.Map;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -24,8 +28,17 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
+                ProcessBuilder pb = new ProcessBuilder("ls", "-l");
+                pb.directory(new File("/dev"));  //切换到工作目录 /dev
+                Map<String, String> map = pb.environment();  // 得到进程生成器的环境 变量,这个变量可以自己修改
+                try {
+                    Process p = pb.start();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
             }
         });
+
     }
 
     @Override
