@@ -1,4 +1,5 @@
 # LifeObserved
+[![](https://jitpack.io/v/wangdongyi/LifeObserved.svg)](https://jitpack.io/#wangdongyi/LifeObserve
 监听activity生命周期
 ```
 LifeManager.getInstance().ObserveActivity(activity, new LifeListener() {
