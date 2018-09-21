@@ -97,7 +97,7 @@ public class LifeManager {
     /**
      * 找到用于监听生命周期的空白的Fragment
      */
-    private SupportActLifeListenerFragment findFragment(FragmentManager fm) {
+    public SupportActLifeListenerFragment findFragment(FragmentManager fm) {
         SupportActLifeListenerFragment current = (SupportActLifeListenerFragment) fm.findFragmentByTag(FRAGMENT_TAG);
         if (current == null) {//没有找到，则新建
             current = new SupportActLifeListenerFragment();

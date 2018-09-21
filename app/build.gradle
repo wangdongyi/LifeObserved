@@ -26,4 +26,6 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
     implementation project(':lifelibrary')
     implementation 'com.android.support:design:27.0.1'
+    implementation 'com.android.support:appcompat-v7:27.0.1'
+    implementation 'com.android.support:support-v13:27.0.1'
 }
