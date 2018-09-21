@@ -1,5 +1,11 @@
+[![](https://jitpack.io/v/wangdongyi/LifeObserved.svg)](https://jitpack.io/#wangdongyi/LifeObserve
+```
+	dependencies {
+	        compile 'com.github.wangdongyi:LifeObserved:1.0.0'
+	}
+```
 # LifeObserved
-监听activity生命周期
+#监听activity生命周期
 ```
 LifeManager.getInstance().ObserveActivity(activity, new LifeListener() {
 
